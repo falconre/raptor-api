@@ -1,0 +1,19 @@
+[package]
+name = "raptor-api"
+version = "0.0.1"
+authors = [ "Alex Eubanks <endeavor@rainbowsandpwnies.com>" ]
+
+[dependencies]
+error-chain = "0.12"
+falcon = {version = "0.4.4", features=["thread_safe"]}
+jsonrpc-http-server = { git = "https://github.com/paritytech/jsonrpc" }
+log = "0.4"
+owning_ref = "0.4"
+raptor = {git="https://github.com/falconre/raptor", rev="42c8b609f0d55677844d9c"}
+rayon = "1.0"
+simplelog = "0.5"
+serde_json = "1.0"
+
+[[bin]]
+name = "raptor-api"
+path = "src/main.rs"
